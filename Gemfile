@@ -2,12 +2,7 @@ ruby "2.2.3"
 source "https://rubygems.org"
 
 group :production do
-  gem "pg", "~> 0.17.1"
   gem "unicorn", "~> 4.7"
-end
-
-group :development do
-  gem "sqlite3", "~> 1.3", ">= 1.3.8"
 end
 
 group :development, :test do
@@ -23,21 +18,22 @@ group :development, :test do
   gem "timecop", "~> 0.7.1"
 end
 
-gem "activerecord", "~> 4.0"
-gem "arel", "~> 4.0.2"
+gem "mysql2", "~> 0.3.20"
+gem "activerecord", "~> 4.2.5"
+gem "arel", "~> 6.0.3"
 gem "bcrypt-ruby", "~> 3.1.2"
-gem "delayed_job", "~> 4.0"
-gem "delayed_job_active_record", "~> 4.0"
+gem "delayed_job", "~> 4.1"
+gem "delayed_job_active_record", "~> 4.1"
 gem "feedbag", "~> 0.9.2"
 gem "feedjira", "~> 1.3.0"
-gem "i18n", "~> 0.6.9"
+gem "i18n", "~> 0.7"
 gem "loofah", "~> 2.0.0"
 gem "nokogiri", "~> 1.6"
 gem "rack-ssl", "~> 1.4.1"
 gem "racksh", "~> 1.0"
-gem "rake", "~> 10.1", ">= 10.1.1"
+gem "rake", "~> 10.4.2"
 gem "sinatra", "~> 1.4", ">= 1.4.4"
-gem "sinatra-activerecord", "~> 1.2", ">= 1.2.3"
+gem "sinatra-activerecord", "~> 2.0.9"
 gem "sinatra-assetpack", "~> 0.3.1", require: "sinatra/assetpack"
 gem "sinatra-contrib", ">= 1.4.2"
 gem "sinatra-flash", "~> 0.3.0"
